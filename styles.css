@@ -1,0 +1,581 @@
+:root {
+    --primary-font: News Cycle;
+    --secondary-font: Merriweather;
+    --primary-color: #FFF2AF;
+    --secondary-color: #DAD2FF;
+    --tertiary-color: white;
+    --quartenary-color: #493D9E;
+    --background1: #483AA0;
+    --background2: #0E2148;
+    --background3: #7965C1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+    font-size: 62.5%;
+    scrollbar-width: none;
+    color: var(--primary-color);
+
+}
+
+body {
+    background-color: var(--background1);
+}
+
+.divider {
+    width: 100%;
+    height: 5vh;
+    background-color: var(--background2);
+}
+
+.back-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 999;
+    display: flex;
+    text-align: center;
+    place-items: center;
+    
+}
+
+.back-top i {
+    font-size: 4.5rem;
+}
+
+.back-top i:hover {
+    opacity: 0.9;
+}
+
+/* Display */
+/* Laptop */
+@media (max-width: 1366px){
+    html {
+        font-size: 40%;
+    }
+
+}
+
+/* Tablet */
+@media (max-width: 768px){
+    html {
+        font-size: 27.5%;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 450px){
+    html {
+        font-size: 20%;
+    }
+
+}
+
+/* Spans */
+.quartenary-color {
+    font-size: inherit;
+    font-family: inherit;
+    color: var(--quartenary-color);
+}
+
+.bold {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.tertiary-color {
+    font-size: inherit;
+    font-family: inherit;
+    color: var(--tertiary-color);
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    height: 9rem;
+    width: 100%;
+    background-color: var(--background2);
+    font-family: var(--secondary-font);
+    z-index: 999;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.navcontent {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+
+}
+
+.navcontent h1 {
+    font-size: 3rem;
+    margin-left: 5%;
+    position: relative;
+}
+
+.navanchors {
+    margin-right: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    place-items: center;
+
+}
+
+.navanchor {
+    font-size: 2rem;
+    width: 100%;
+    padding: 50% 20px;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+.navanchor:hover {
+    background-color: rgba(227, 208, 149, 0.9);
+    color: var(--background2);
+    transition: ease-out 0.4s;
+    box-shadow: 0 0 3px 3px;
+}
+
+/* Hero */
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(./images/wife2.png);
+    object-fit: contain;
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    place-items: center;
+}
+
+.trapezoid {
+    position: absolute;
+    height: 10ovh;
+    width: 100%;
+    display: flex;
+}
+
+.triangle {
+    border-top: 50vh solid transparent;
+    border-right: 25vh solid transparent;
+    border-left: 25vh solid rgba(72, 58, 160, 0.5);
+    border-bottom: 50vh solid rgba(72, 58, 160, 0.5);
+
+}
+.rectangle {
+    width: 60vh;
+    height: 100vh;
+    background-color: rgba(72, 58, 160, 0.5);
+}
+
+.hero-text {
+    z-index: 1;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-family: var(--secondary-font);
+
+}
+
+.hero-text p {
+    font-size: 2rem;
+    letter-spacing: 0.25px;
+}
+
+.hero-pointer {
+    position: absolute;
+    top: 86%;
+    z-index: 1;
+    right: 42.5%;
+    left: 42.5%;
+    
+}
+
+.hero-pointer a {
+    text-decoration: none;
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-pointer a p {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-pointer a i {
+    font-size: 4.5rem;
+    animation: pointer 0.75s linear infinite;
+    position: relative;
+}
+
+.hero-pointer:hover {
+    transform: scale(1.25);
+    transition: 0.5s ease-out;
+
+}
+
+@keyframes pointer {
+    0% {
+        top: 0px;
+    }
+    25% {
+        top: 3px;
+    }
+    50% {
+        top: 0px;
+    }
+    75% {
+        top: -3px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+
+/* List */
+.list {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(images/bg-list.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+.list::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(14, 33, 72, 1)10%, rgba(14, 33, 72, 0)50%);
+}
+
+.list::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(360deg, rgba(14, 33, 72, 1)10%, rgba(14, 33, 72, 0)50%);
+}
+
+.list-shade {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 33, 72, 0.5);
+    position: absolute;
+}
+
+.list-triangles i {
+    position: absolute;
+    font-size: 3.5rem;
+    opacity: 0.8;
+    z-index: 1;
+
+}
+
+.list-triangles i:hover {
+    animation: shake 0.5s infinite;
+
+}
+
+.list-triangles .triangle1 {
+    top: 20%;
+    right: 10%;
+    position: absolute;
+    animation: jiggle1 2s linear infinite;
+}
+
+.list-triangles .triangle2 {
+    top: 40%;
+    right: 25%;
+    position: absolute;
+    animation: jiggle2 2s linear infinite;
+}
+
+.list-triangles .triangle3 {
+    top: 18%;
+    right: 50%;
+    position: absolute;
+    animation: jiggle3 2s linear infinite;
+}
+
+.list-triangles .triangle4 {
+    top: 70%;
+    right: 7.5%;
+    position: absolute;
+    animation: jiggle1 2s linear infinite;
+}
+
+.list-triangles .triangle5 {
+    top: 80%;
+    right: 40%;
+    position: absolute; 
+    animation: jiggle3 2s linear infinite;
+}
+
+.list-triangles .triangle6 {
+    top: 30%;
+    left: 20%;
+    position: absolute;
+    animation: jiggle2 2s linear infinite;
+}
+
+.list-triangles .triangle7 {
+    top: 50%;
+    left: 35%;
+    position: absolute;
+    animation: jiggle1 2s linear infinite;
+}
+
+.list-triangles .triangle8 {
+    top: 70%;
+    left: 5%;
+    position: absolute; 
+    animation: jiggle3 2s linear infinite;
+}
+
+.list-triangles .triangle9 {
+    top: 15%;
+    left: 4%;
+    position: absolute;
+    animation: jiggle2 3s linear infinite;
+}
+
+.list-triangles .triangle10 {
+    top: 75%;
+    left: 27%;
+    position: absolute;
+    animation: jiggle1 2s linear infinite;
+}
+
+@keyframes jiggle1 {
+    0% {
+        transform: translate(2px, 2px);
+    }
+    25% {
+        transform: translate(1px, -1px);
+    }
+    50% {
+        transform: translate(-1.5px, -1.5px);
+    }
+    75% {
+        transform: translate(-2px, 1px);
+    }
+    100% {
+        transform: translate(2px, 2px);
+    }
+}
+
+@keyframes jiggle2 {
+    0% {
+        transform: translate(-1.5px, -1.5px);
+    }
+    25% {
+        transform: translate(-2px, 1px);
+    }
+    50% {
+        transform: translate(2px, 2px);
+    }
+    75% {
+        transform: translate(1px, -1px);
+    }
+    100% {
+        transform: translate(-1.5px, -1.5px);
+    }
+}
+
+@keyframes jiggle3 {
+    0% {
+        transform: translate(1px, -1px);
+    }
+    25% {
+        transform: translate(-1.5px, -1.5px);
+    }
+    50% {
+        transform: translate(-2px, 1px);
+    }
+    75% {
+        transform: translate(2px, 2px);
+    }
+    100% {
+        transform: translate(1px, -1px);
+    }
+}
+
+@keyframes shake {
+    0% { 
+        transform: translate(1px, 1px) rotate(0deg); 
+    }
+    10% { 
+        transform: translate(-1px, -2px) rotate(-1deg); 
+    }
+    20% { 
+        transform: translate(-3px, 0px) rotate(1deg); 
+    }
+    30% { 
+        transform: translate(3px, 2px) rotate(0deg); 
+    }
+    40% { 
+        transform: translate(1px, -1px) rotate(1deg); 
+    }
+    50% { 
+        transform: translate(-1px, 2px) rotate(-1deg); 
+    }
+    60% { 
+        transform: translate(-3px, 1px) rotate(0deg); 
+    }
+    70% { 
+        transform: translate(3px, 1px) rotate(-1deg); 
+    }
+    80% { 
+        transform: translate(-1px, -1px) rotate(1deg); 
+    }
+    90% { 
+        transform: translate(1px, 2px) rotate(0deg); 
+    }
+    100% { 
+        transform: translate(1px, -2px) rotate(-1deg); 
+    }
+}
+
+.list-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    place-items: center;
+    text-align: center;
+}
+
+.list-content h2 {
+    font-size: 4rem;
+    position: relative;
+    top: 45%;
+    text-decoration: underline;
+}
+
+.list-content table {
+    position: relative;
+    top: 50%;
+    border: 1px solid var(--primary-color);
+
+}
+
+.list-content table tr td a {
+    font-size: 2.5rem;
+    text-decoration: none;
+    padding: 0 40px;
+    
+}
+
+.list-content table tr td a:hover {
+    background-color: var(--primary-color);
+    color: var(--background2);
+    transition: ease-out 0.5s;
+    
+}
+
+/* Rule */
+.rule {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(images/bg-rule.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+.rule-shade {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.5;
+    background-color: var(--background2);
+    
+}
+
+.rule-content {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    top: 25%;
+    position: relative;
+}
+
+.rule-content div {
+    margin-top: 5vh;
+    font-size: 2.5rem;
+    padding: 40px 60px;
+    border: 1px solid var(--primary-color);
+    
+}
+
+.rule-content div span {
+    color: var(--tertiary-color);
+    font-size: inherit;
+
+}
+
+.rule-content h2 {
+    font-size: 4rem;
+    border: 1px solid var(--primary-color);
+    margin: 0 auto;
+    width: 30%;
+    padding: 20px 0;
+    color: var(--tertiary-color);
+}
+
+/* Footer */
+.footer {
+    height: 12.5vh;
+    width: 100%;
+    background-color: var(--background2);
+    font-family: var(--secondary-font);
+    position: relative;
+    display: flex;
+    place-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    
+}
+
+.footer h1 {
+    margin: 0 auto;
+    font-size: 2.5rem;
+}
