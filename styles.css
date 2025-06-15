@@ -513,11 +513,12 @@ body {
 /* Rule */
 .rule {
     width: 100%;
-    height: 100vh;
+    height: auto;
     position: relative;
     background-image: url(images/bg-rule.jpg);
     background-repeat: none;
     background-size: cover;
+    padding-bottom: 5vh;
 }
 
 .rule-shade {
