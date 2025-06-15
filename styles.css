@@ -33,14 +33,12 @@ body {
 
 .back-top {
     position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
+    bottom: 2.5%;
+    right: 2.5%;
+    width: auto;
+    height: auto;
     z-index: 999;
-    display: flex;
     text-align: center;
-    place-items: center;
     
 }
 
@@ -56,15 +54,16 @@ body {
 /* Laptop */
 @media (max-width: 1366px){
     html {
-        font-size: 40%;
+        font-size: 60%;
     }
+
 
 }
 
 /* Tablet */
 @media (max-width: 768px){
     html {
-        font-size: 27.5%;
+        font-size: 40%;
     }
 
 }
@@ -74,6 +73,8 @@ body {
     html {
         font-size: 20%;
     }
+    
+
 
 }
 
@@ -355,7 +356,7 @@ body {
 
 .list-triangles .triangle7 {
     top: 50%;
-    left: 35%;
+    left: 30%;
     position: absolute;
     animation: jiggle1 2s linear infinite;
 }
@@ -490,16 +491,15 @@ body {
 .list-content .list-table {
     position: relative;
     top: 50%;
-    border: 1px solid var(--primary-color);
-    display: flex;
-    padding: 5px 0;
-    flex-wrap: wrap;
+    display: inline-flex;
+    z-index: 2;
+    place-items: center;
 }
 
 .list-content .list-table a {
     font-size: 2.5rem;
     text-decoration: none;
-    padding: 5px 40px;
+    padding: 5px 20px;
     
 }
 
