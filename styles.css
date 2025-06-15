@@ -518,7 +518,8 @@ body {
     background-image: url(images/bg-rule.jpg);
     background-repeat: none;
     background-size: cover;
-    padding-bottom: 5vh;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
 }
 
 .rule-shade {
@@ -535,7 +536,6 @@ body {
     text-align: center;
     margin: 0 auto;
     display: block;
-    top: 25%;
     position: relative;
 }
 
