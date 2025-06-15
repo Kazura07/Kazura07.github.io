@@ -487,7 +487,7 @@ body {
     text-decoration: underline;
 }
 
-.list-table {
+.list-content .list-table {
     position: relative;
     top: 50%;
     border: 1px solid var(--primary-color);
@@ -496,14 +496,14 @@ body {
     flex-wrap: wrap;
 }
 
-.list-table a {
+.list-content .list-table a {
     font-size: 2.5rem;
     text-decoration: none;
     padding: 5px 40px;
     
 }
 
-.list-table a:hover {
+.list-content .list-table a:hover {
     background-color: var(--primary-color);
     color: var(--background2);
     transition: ease-out 0.5s;
